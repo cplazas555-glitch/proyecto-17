@@ -1,0 +1,131 @@
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d8494;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    padding: 50px 12%;
+    border: 2px solid #333;
+    border-radius: 22px;
+    border: 10px solid #1f61ab;
+}
+
+/* Título */
+h1 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    border: 2px solid #454b50;
+    border-radius: 12px;
+    padding: 4px;
+    gap: 8px;
+    border: 10px solid #1f61ab;
+}
+
+/* Campo de texto */
+form input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 17px;
+}
+
+form input::placeholder {
+    color: #c5ccd4;
+}
+
+/* Botón de agregar */
+form button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Lista de tareas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+/* Cada tarea */
+li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+/* Casilla de completar */
+.casilla {
+    width: 26px;
+    height: 26px;
+    accent-color: #06ac2d;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Texto de la tarea */
+.texto-tarea {
+    flex: 1;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+/* Tarea completada */
+.completada .texto-tarea {
+    text-decoration: line-through;
+    color: #a70000;
+}
+
+/* Botón para eliminar */
+.eliminar {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 32px;
+}
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .texto-tarea {
+        font-size: 16px;
+    }
+}
